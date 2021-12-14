@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Home, Appointments, CreateAppointment, Admin, AdminLogin, Navigation} from "./components"
+import {HashRouter as Router, Route, Routes, useNavigate} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <Router forceRefresh = {true}>
+            <Navigation />
+            <Routes>
+                <Route exact path="/" element={<Home />}/>
+                <Route exact path="/appointment" element={<Appointments />}/>
+                <Route exact path="/users/user/create_appointment" element={<CreateAppointment />} />
+                <Route exact path="/admin/login/admin" element ={<Admin />} /> 
+                <Route exact path="/admin/login" element = {<AdminLogin />} />
+            </Routes>
+        </Router>
+    )
 }
 
 export default App;

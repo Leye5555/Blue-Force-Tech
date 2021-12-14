@@ -1,0 +1,16 @@
+.admin-container{
+    margin-top: max(5vw, 30px);
+}
+
+.logout {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-size: 1rem;
+    color: orangered;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 20px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}

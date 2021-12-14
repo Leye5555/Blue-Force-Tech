@@ -1,0 +1,29 @@
+.login-wrap {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+
+}
+
+.login-wrap h1 {
+    color : white;
+}
+
+.login-wrap p {
+    padding-bottom: 5%;
+}
+.login-container {
+    margin-top: 5%;
+    padding: max(10%, 100px) 5%;
+    width: fit-content;
+    height: fit-content;
+    border: 0.5px solid var(--main-color);
+    border-radius:  20px;
+    background: -webkit-linear-gradient(45deg, var(--main-color), blue 50%, rgb(240, 104, 199) );
+    font-size: 1.1em;
+}
+.login-container input {
+    font-size: 1.1em;
+}

@@ -1,0 +1,110 @@
+.appointment-form {
+    border: 0.5px solid var(--main-color);
+    border-radius:  20px;
+    background: -webkit-linear-gradient(45deg, var(--main-color), blue 50%, rgb(240, 104, 199) );
+    width: 100vw;
+    height: fit-content;
+    font-size: clamp(16px, 1.1em, 2em);
+    color: white;
+    display: grid;
+    place-items: center;
+    padding-block: 80px;
+    overflow-x : hidden;
+}
+
+.appointment-form .form-group{
+    display: flex;
+    flex-flow: row wrap !important;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.appointment-form .form-group input,
+.appointment-form .form-group label  {
+    display: block;
+    width: max(30vw, 100px);
+}
+.appointment-form .form-group input {
+    border: 0.5px solid var(--main-color);
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 15px;
+    width: fit-content;
+    line-break:normal;
+    font-size: 20px;
+}
+.form-group input:focus{
+    outline: unset;
+}
+/* 
+.form-group .text-label {
+    position: relative;
+    top: -150px;
+} */
+
+.form-group textarea {
+    border: 0.5px solid var(--main-color);
+    border-radius: 10px;
+    margin-left: 15px;
+    width: max(30vw, 150px);
+    height: 20vh;
+    font-size: 20px;
+    
+}
+
+.form-group textarea:focus{
+    outline: unset;
+}
+
+.logout {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-size: 1rem;
+    color: orangered;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 20px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+.submit {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin-inline: auto;
+    margin-top: max(6vw, 40px);
+    padding: 10px max(7vw, 40px);
+    font-size: 1rem;
+    color: orangered;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:450px) {
+    .appointment-form{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 105vw;
+        align-items: center;
+    }
+    .appointment-form .form-group {
+        display: flex;
+        flex-flow : column nowrap;
+        padding: 0;
+    }
+    .appointment-form h1 {
+        text-align: center;
+        width: min-content;
+    }
+
+    .appointment-form .form-group input,
+    .appointment-form .form-group textarea,
+.appointment-form .form-group label  {
+    display: block;
+    width: 70%;
+}
+}

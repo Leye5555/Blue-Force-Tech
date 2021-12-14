@@ -1,0 +1,107 @@
+.parent-container {
+    margin-top: 10vw;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    font-size: 1.1em;
+
+}
+
+.welcome {
+    font-size: clamp(45px, 5em, 5vw);
+    color: var(--main-color);
+    font-family: 'El Messiri', sans-serif;
+    font-size: 4em;
+    transition: all 2s;
+    background: -webkit-linear-gradient(45deg,rgb(240, 104, 199), var(--main-color)70%, blue );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-animation 10s infinite linear; 
+}
+
+@keyframes text-animation {
+    0% {
+        background: -webkit-linear-gradient(45deg,rgb(240, 104, 199), var(--main-color)70%, rgb(174, 0, 255) );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       
+    }
+    50% {
+        background: -webkit-linear-gradient(45deg, white, rgb(240, 104, 199) 30%, var(--main-color) 60%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       
+    }
+    100% {
+        background: -webkit-linear-gradient(45deg, var(--main-color), rgb(174, 0, 255) 50%, rgb(240, 104, 199) );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+}
+
+.form-group {
+    margin: 20px;
+    width: max-content;
+}
+
+.form-group input {
+    border: 0.5px solid var(--main-color);
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 15px;
+    font-size: 1em;
+    padding-block : 5px;
+}
+
+.form-group input:focus{
+    outline: unset;
+}
+
+.login-button-wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-button-wrap button {
+    width: max(80%, max-content);
+    border-radius: 15px;
+    height: fit-content;
+    font-size: 25px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1px 10px;
+    margin-left: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-button-wrap img {
+    width: 25px;
+}
+
+.sign-up {
+    margin-top: 20px;
+    font-family: max(0.5em, 16px);
+    text-decoration: underline;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (max-width: 363px) {
+    .form-group input {
+        border: 0.5px solid var(--main-color);
+        border-radius: 10px;
+        height: 30px;
+        width: 140px;
+        margin-left: 15px;
+        font-size: 1em;
+        padding-block : 5px;
+    }
+}

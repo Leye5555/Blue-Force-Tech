@@ -1,0 +1,154 @@
+
+.nav-container {
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content : space-around;
+    width: 95%;
+    height: fit-content;
+    position: absolute;
+    z-index: 190;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+}
+
+.nav-container > .logo {
+    position: absolute;
+    right: 30px;
+    flex: 1 1 2%;
+    padding-left: 30px;
+
+}
+.logo img {
+    width: 200px;
+    height: 100px;
+}
+.nav-container > div:nth-child(2) {
+    flex : 1 1 50%;
+    font-size: 0.8rem;
+}
+
+.flexBox {
+    display: flex;
+    flex-flow : row nowrap;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 70vw;
+    padding-top: 2%;
+}
+
+
+.toggler {
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    z-index: 200;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(45deg,rgb(240, 104, 199), var(--main-color)70%, white );
+    overflow: hidden;
+    clip-path: ellipse(60% 75% at 30% 20%);
+    cursor: pointer;
+}
+
+.toggler-click {
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top : 0px;
+    z-index: 200;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(45deg,rgb(240, 104, 199), var(--main-color)70%, white );
+    overflow: hidden;
+    cursor: pointer; 
+}
+
+.bar {
+    width: 40px;
+    height: 3px;
+    background-color: #000;
+    margin-top: 8px;
+}
+.bar:nth-child(2) {
+    width: 30px;
+}
+
+.bar:nth-child(3) {
+    width: 20px;
+}
+.toggler {display: block;}
+    .bar1 {transform: translate(0px, 20px) rotate(45deg);  width: 40px;
+        height: 3px;
+        background-color: #000;
+        transition: all 0.5s;}
+    .bar2 {visibility: hidden;  width: 40px;
+        height: 3px;
+        background-color: #000;
+        transition: all 0.1s;}
+    .bar3 {transform: translate(0px, 14px) rotate(135deg);  width: 40px;
+        height: 3px;
+        background-color: #000;
+        transition: all 0.5s;} 
+
+.notNavDrop {
+    position: absolute;
+    z-index: 190;
+    width: 100vw;
+    height: 100vh;
+    left: -9999px;
+    transition: all 0.5s;
+}
+ 
+.navDrop {
+    position: absolute;
+    top: 0px;
+    z-index: 190;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.39);
+    left: 0;
+    transition: all 0.5s ease;
+}
+.nav-drop-wrap {
+    background-color: white;
+    width: 85vw;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+
+
+.notFlexDrop {
+    display: none;
+}
+.flexDrop {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.flexDrop > li {
+    padding-block : 50px;
+}
+
+.nav-link {
+    color: rgb(240, 104, 199);
+    text-decoration: none;
+    font-size: max(1.8em, 16px);
+
+}
+.nav-active {
+    text-decoration: red;
+}
+
+
+
+

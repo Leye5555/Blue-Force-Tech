@@ -1,0 +1,22 @@
+.paginate {
+    border-collapse: collapse;
+    margin: 70px auto;
+}
+.paginate td,  
+.paginate th{
+    padding-inline : 3vw;
+    border: 1px solid;
+}
+
+.paginate td:first-child,  
+.paginate th:first-child,
+.paginate td:last-child,  
+.paginate th:last-child {
+    width: fit-content;
+    padding : 5px;
+    cursor : pointer;
+}
+
+.paginate td:last-child{
+    font-size: 50px;
+}
